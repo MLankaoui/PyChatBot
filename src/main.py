@@ -1,4 +1,4 @@
-
+from handling_input import commands_handling
 from dotenv import load_dotenv
 import os
 
@@ -24,7 +24,7 @@ def main():
         elif 'exshausted' in user_input or 'bad' in user_input or 'tired' in user_input or 'not feeling good' in user_input or 'not feeling well' in user_input:
             print('im sorry to hear that , how can i help you?')
         else:
-            pass
+            commands_handling(user_input)
 
 def greetings():
     print('hello welcome to PYCHATBOT')
