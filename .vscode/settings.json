@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./src/currency_api",
+        "./src/weather_api"
+    ]
+}
