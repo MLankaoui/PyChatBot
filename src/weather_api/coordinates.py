@@ -7,7 +7,7 @@ api_key = os.getenv('API_KEY_WEATHER')
 
 
 def display_city_cooredinates(city_name):
-    print('So you chose to display the coordinates of your chosen city.')
+    print(f'So you chose to display the coordinates of {city_name} city.')
 
     response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}")
 

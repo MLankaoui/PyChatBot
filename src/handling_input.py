@@ -4,7 +4,7 @@ from weather_api.coordinates import display_city_cooredinates
 
 
 def commands_handling(user_input):
-    global users_currency, target_currency, amount
+    global users_currency, target_currency, amount, city, options
 
     if 'currency exchange' in user_input or 'global currency' in user_input or 'exchange' in user_input or 'USD' in user_input or 'money' in user_input or 'trade' in user_input:
         print('hello i know a little bit about global currencies , how can i assist you')
@@ -23,8 +23,9 @@ def commands_handling(user_input):
         print("4) to see visibility")
         print("5) to see the city overall informations")
 
-        if user_input == '1':
-            city = input("enter the city name : ")
+        options = input('-> choose between these options : ')
+        if options == '1':
+            city = input("-> enter the city name : ").lower()
             display_city_cooredinates(city)
 
 
