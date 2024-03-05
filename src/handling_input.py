@@ -23,8 +23,9 @@ def commands_handling(user_input):
         print("4) to see visibility")
         print("5) to see the city overall informations")
 
-        options = input('-> choose between these options : ')
+        options = input('choose between these options : ')
         if options == '1':
+            print('so you decided to to know about a city\'s coordinates, good good')
             city = input("-> enter the city name : ").lower()
             display_city_cooredinates(city)
 
