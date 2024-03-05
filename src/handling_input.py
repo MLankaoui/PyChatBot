@@ -1,10 +1,6 @@
-import requests
-from dotenv import load_dotenv
-import os
 from currency_api.exchange import exchange
+from weather_api.coordinates import display_city_cooredinates 
 
-load_dotenv()
-api_key = os.getenv('API_KEY_EXCHANGE')
 
 
 def commands_handling(user_input):
@@ -15,13 +11,28 @@ def commands_handling(user_input):
         users_currency = input('-> please enter your current currency: ').upper()
         target_currency = input('-> please enter your target currency: ').upper()
         amount = input('please enter the ammount : ')
+        exchange(users_currency, target_currency, amount)
+    elif 'weather infos' in user_input or 'weather' in user_input or 'weather of a city' in user_input or 'coordinates' in user_input:
+        print('hello i know a little bit about global currencies , how can i assist you')  
+
+        print('here are all the things that i can help you with')
+
+        print("1) to see the coordinates of your chosen city")
+        print("2) to see weather informations")
+        print("3) to see main informations")
+        print("4) to see visibility")
+        print("5) to see the city overall informations")
+
+        if user_input == '1':
+            city = input("enter the city name : ")
+            display_city_cooredinates(city)
+
+
+
+    
 
                             
-    print(f'ammount: {amount}')
-    print(f'users_currency: {users_currency}')
-    print(f'target currency: {target_currency}')
-    exchange(users_currency, target_currency, amount)
-
+    
 
 
 
