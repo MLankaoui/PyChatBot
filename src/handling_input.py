@@ -1,7 +1,6 @@
 from currency_api.exchange import exchange
 from weather_api.coordinates import display_city_cooredinates 
-
-
+from weather_api.weather_infos import display_weather_infos
 
 def commands_handling(user_input):
     global users_currency, target_currency, amount, city, options
@@ -29,6 +28,10 @@ def commands_handling(user_input):
             city = input("-> enter the city name : ").lower()
             display_city_cooredinates(city)
 
+        elif options == '2':
+            print('so you desided to know the weather infos of a city')
+            city = input("-> enter the city name : ").lower()
+            display_weather_infos(city)
 
 
     
